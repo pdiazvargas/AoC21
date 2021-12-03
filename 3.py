@@ -1,10 +1,8 @@
 from utils import get_input
-from collections import defaultdict
 
-counts = defaultdict(int)
 source = [val for val in get_input(day=3).split("\n")]
 
-result = [defaultdict(int) for i in range(len(source[0]))]
+result = [{"0": 0, "1": 0} for i in range(len(source[0]))]
 for reading in source:
     for idx, char in enumerate(reading):
         result[idx][char] += 1
